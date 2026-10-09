@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local secrets and configuration
+.env
+.env.*
+!.env.example
+
+# Local state and generated uploads
+*.db
+*.sqlite
+*.sqlite3
+uploads/
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

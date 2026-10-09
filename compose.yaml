@@ -1,0 +1,14 @@
+services:
+  platform:
+    build: .
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      PORT: "8000"
+      PLATFORM_DB: /data/platform.sqlite3
+    volumes:
+      - platform-data:/data
+    restart: unless-stopped
+
+volumes:
+  platform-data:

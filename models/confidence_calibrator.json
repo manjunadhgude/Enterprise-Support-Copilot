@@ -1,0 +1,27 @@
+{
+  "version": "synthetic-isotonic-v1",
+  "method": "isotonic_pav_beta_1_1",
+  "n": 12,
+  "bins": [
+    {
+      "lo": 0.05,
+      "hi": 0.85,
+      "n": 8,
+      "success": 7,
+      "p": 0.8
+    },
+    {
+      "lo": 0.9,
+      "hi": 0.92,
+      "n": 4,
+      "success": 4,
+      "p": 0.8333333333333334
+    }
+  ],
+  "abstention_threshold": 0.8,
+  "threshold_selection": {
+    "target_train_selective_accuracy": 0.8,
+    "minimum_retained_train_cases": 4,
+    "policy": "lowest threshold achieving target on the training split"
+  }
+}

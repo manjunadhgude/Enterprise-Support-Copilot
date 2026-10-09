@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/p1/response.schema.json",
+  "title": "P1 response contract",
+  "type": "object",
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": { "properties": { "status": { "const": "answered" } }, "required": ["status"] },
+      "then": { "properties": { "verification": { "properties": { "passed": { "const": true } } } } }
+    }
+  ],
+  "required": [
+    "schema_version",
+    "task_id",
+    "status",
+    "answer",
+    "confidence",
+    "verification",
+    "evidence",
+    "events",
+    "actions",
+    "subquestions",
+    "latency_ms",
+    "trace"
+  ],
+  "properties": {
+    "schema_version": { "const": "p1-response-v1" },
+    "task_id": { "type": "string", "minLength": 1 },
+    "status": {
+      "type": "string",
+      "enum": ["answered", "abstained", "refused", "denied", "needs_approval", "error"]
+    },
+    "answer": { "type": "string" },
+    "confidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["score", "method", "calibrator_version"],
+      "properties": {
+        "score": { "type": "number", "minimum": 0, "maximum": 1 },
+        "raw_support_score": { "type": "number", "minimum": 0, "maximum": 1 },
+        "method": { "type": "string" },
+        "calibrator_version": { "type": ["string", "null"] }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["passed", "method", "checks"],
+      "properties": {
+        "passed": { "type": "boolean" },
+        "method": { "type": "string" },
+        "checks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["check", "passed"],
+            "properties": { "check": { "type": "string" }, "passed": { "type": "boolean" } }
+          }
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "kind"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "kind": { "type": "string", "minLength": 1 }
+        },
+        "additionalProperties": true
+      }
+    },
+    "events": { "type": "array", "items": { "type": "object" } },
+    "actions": { "type": "array", "items": { "type": "object" } },
+    "subquestions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "depends_on", "question"],
+        "properties": {
+          "id": { "type": "string" },
+          "depends_on": { "type": "array", "items": { "type": "string" } },
+          "question": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "latency_ms": { "type": "number", "minimum": 0 },
+    "trace": { "type": "object" }
+  }
+}

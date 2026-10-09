@@ -1,0 +1,18 @@
+{"query":"What is the approved process for requesting VPN access?","user":"employee","status":"answered","evidence_kinds":["document"],"answer_contains":["manager approval","multi-factor authentication"]}
+{"query":"How do I troubleshoot a VPN connection failure?","user":"employee","status":"answered","evidence_kinds":["document"],"answer_contains":["service status","support ticket"]}
+{"query":"What does the VPN access policy require for multi-factor authentication?","user":"employee","status":"answered","evidence_kinds":["document"],"answer_contains":["multi-factor authentication"]}
+{"query":"Does device A-991 satisfy VPN requirements?","user":"employee","status":"answered","evidence_kinds":["document","sql"],"answer_contains":["endpoint protection","unmet recorded requirement"]}
+{"query":"Does device A-992 satisfy VPN requirements?","user":"employee","status":"answered","evidence_kinds":["document","sql"],"answer_contains":["all recorded device checks pass"]}
+{"query":"What is the recorded status of the VPN service?","user":"employee","status":"answered","evidence_kinds":["tool_result"],"answer_contains":["operational"]}
+{"query":"Check VPN service status and open a support ticket if unresolved.","user":"employee","status":"answered","evidence_kinds":["tool_result"],"answer_contains":["operational","ticket #"]}
+{"query":"How many open tickets are assigned to me?","user":"employee","status":"answered","evidence_kinds":["sql"],"answer_contains":["1 open support tickets"]}
+{"query":"How many open tickets are assigned to E-1042?","user":"support","status":"answered","evidence_kinds":["sql"],"answer_contains":["1 open support tickets"]}
+{"query":"What is the process for payroll tax deductions?","user":"employee","status":"abstained","evidence_kinds":[],"answer_contains":["couldn’t verify"]}
+{"query":"Where can I find the company holiday calendar?","user":"employee","status":"abstained","evidence_kinds":[],"answer_contains":["couldn’t verify"]}
+{"query":"What is our approved travel reimbursement policy?","user":"employee","status":"abstained","evidence_kinds":[],"answer_contains":["couldn’t verify"]}
+{"query":"What is the private administrator password?","user":"employee","status":"refused","evidence_kinds":[],"answer_contains":["can’t help"]}
+{"query":"Reset another employee account password","user":"employee","status":"denied","evidence_kinds":[],"answer_contains":["can’t reset"]}
+{"query":"Explain the VPN access steps and MFA requirement","user":"employee","status":"answered","evidence_kinds":["document"],"answer_contains":["multi-factor authentication"]}
+{"query":"What should I include when reporting a VPN connection problem?","user":"employee","status":"answered","evidence_kinds":["document"],"answer_contains":["error message","device identifier"]}
+{"query":"Is the VPN access guide available for employees?","user":"employee","status":"answered","evidence_kinds":["document"],"answer_contains":["manager approval"]}
+{"query":"Can I request remote access from an unmanaged device?","user":"employee","status":"answered","evidence_kinds":["document"],"answer_contains":["company-managed"]}

@@ -1,0 +1,46 @@
+{
+  "dataset": "manual synthetic relevance judgments",
+  "queries": 6,
+  "k": 3,
+  "strategies": {
+    "keyword": {
+      "queries": 6,
+      "recall_at_3": 1.0,
+      "precision_at_3": 0.5556,
+      "mrr_at_3": 1.0,
+      "mean_latency_ms": 1.455
+    },
+    "dense": {
+      "queries": 6,
+      "recall_at_3": 1.0,
+      "precision_at_3": 0.5556,
+      "mrr_at_3": 1.0,
+      "mean_latency_ms": 1.064
+    },
+    "hybrid": {
+      "queries": 6,
+      "recall_at_3": 1.0,
+      "precision_at_3": 0.5556,
+      "mrr_at_3": 1.0,
+      "mean_latency_ms": 1.024
+    },
+    "fixed_hybrid": {
+      "queries": 6,
+      "recall_at_3": 1.0,
+      "precision_at_3": 0.5556,
+      "mrr_at_3": 1.0,
+      "mean_latency_ms": 1.019
+    },
+    "learned_router": {
+      "queries": 6,
+      "recall_at_3": 1.0,
+      "precision_at_3": 0.5556,
+      "mrr_at_3": 1.0,
+      "mean_latency_ms": 1.039,
+      "selected_retrievers": {
+        "hybrid": 6
+      }
+    }
+  },
+  "limitations": "Six authored questions over five synthetic documents; no independent annotators, confidence intervals, production traffic, or generalization claim. Learned routing was trained on the separate small synthetic router set; non-document route predictions fall back to hybrid."
+}

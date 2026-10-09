@@ -1,0 +1,37 @@
+{
+  "dataset": "synthetic hand-labeled router examples",
+  "split": "deterministic stratified by label, every third held out",
+  "train_n": 10,
+  "test_n": 8,
+  "router_accuracy": 0.75,
+  "per_class": {
+    "dense": {
+      "correct": 1,
+      "total": 1,
+      "accuracy": 1.0
+    },
+    "hybrid": {
+      "correct": 1,
+      "total": 2,
+      "accuracy": 0.5
+    },
+    "keyword": {
+      "correct": 1,
+      "total": 1,
+      "accuracy": 1.0
+    },
+    "sql": {
+      "correct": 1,
+      "total": 2,
+      "accuracy": 0.5
+    },
+    "tool": {
+      "correct": 2,
+      "total": 2,
+      "accuracy": 1.0
+    }
+  },
+  "fixed_hybrid_baseline_accuracy": null,
+  "baseline_note": "Not measured: no human relevance labels for optimal retrieval strategy; do not compare classifier accuracy against retrieval quality.",
+  "limitations": "Small synthetic test set; examples are authored from templates and are not representative of enterprise traffic."
+}

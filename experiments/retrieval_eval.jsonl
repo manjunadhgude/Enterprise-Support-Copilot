@@ -1,0 +1,6 @@
+{"query":"VPN access policy requirements and MFA","relevant_document_ids":["vpn-access-v2","remote-eligibility-v1"]}
+{"query":"Troubleshoot VPN connection failures and restart client","relevant_document_ids":["vpn-access-v2"]}
+{"query":"Managed device must be encrypted and have endpoint security","relevant_document_ids":["device-standard-v1","vpn-access-v2"]}
+{"query":"Remote access employee manager approval and business role","relevant_document_ids":["remote-eligibility-v1","vpn-access-v2"]}
+{"query":"Which checks does IT Support verify before enabling remote access","relevant_document_ids":["vpn-access-v2","remote-eligibility-v1"]}
+{"query":"Unknown inventory fields do not count as compliant","relevant_document_ids":["device-standard-v1"]}
