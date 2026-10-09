@@ -56,8 +56,8 @@ The local reference demo can run without these items. They remain incomplete onl
 - Router evaluation: 8 synthetic holdout examples; 0.75 accuracy.
 - Retrieval evaluation: 6 synthetic questions; all five strategies tied (Recall@3 1.0, Precision@3 0.5556, MRR@3 1.0).
 - Confidence evaluation: 18 authored synthetic cases (12 train/6 holdout); holdout Brier score 0.0359 and ECE 0.1889 after calibration, versus raw-signal Brier 0.2303 and ECE 0.3720. These tiny-set measurements are not production evidence.
-- GitHub Actions workflow defines the test, evaluation, compilation, and Docker build steps. It has not run on GitHub because this folder is not connected to a remote repository.
-- Docker image build: not verified because Docker is unavailable in this environment; Docker is not needed to run the selected local demo.
+- GitHub Actions CI run #1 passed on the public repository after the push. Tests, all three evaluations, Python compilation, and the Docker image build succeeded. See [workflow run #1](https://github.com/manjunadhgude/Enterprise-Support-Copilot/actions/runs/37972606616).
+- Docker image build: passed on the GitHub Actions runner. Docker remains unavailable locally and is not needed to run the selected local demo.
 - Provider-backed generation: not implemented; secure API key provisioning is pending local destination approval. Deterministic local behavior remains available without API spend.
 - Python module compilation and response JSON Schema parsing: passed.
 - Local HTTP smoke check: `/health/live` returned `ok`; `/health/ready` returned `ready`.
